@@ -1,10 +1,9 @@
-
 function initialize() {
 
     //Map parametrs
     var mapOptions = {
-        zoom: 14,
-        center: new google.maps.LatLng(41.143, -73.341),
+        zoom: 6,
+        center: new google.maps.LatLng(21.8831712, -102.3613399),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
 
         mapTypeControl: false,
@@ -204,8 +203,10 @@ function initialize() {
     //category
     var cook = 'img/icon/01.png';
 
-    //positions
-    var point1 = new google.maps.LatLng(41.154, -73.328);
+    //Marker positions
+    var point1 = new google.maps.LatLng(19.39068, -99.2836984);
+    var point2 = new google.maps.LatLng(20.6737777, -103.4054535);
+    var point3 = new google.maps.LatLng(19.0400572, -98.2630055);
 
     //markers
     var marker1 = new google.maps.Marker({
@@ -213,9 +214,25 @@ function initialize() {
         map: map,
         category: cook,
         icon: cook,
-        title: "point1"
+        title: "Mexico City"
     });
-  
+
+    var marker2 = new google.maps.Marker({
+        position: point2,
+        map: map,
+        category: cook,
+        icon: cook,
+        title: "Guadalajara"
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: point3,
+        map: map,
+        category: cook,
+        icon: cook,
+        title: "Puebla"
+    });
+
 
     //information for
     function goToLink() {
@@ -223,41 +240,6 @@ function initialize() {
     }
     google.maps.event.addListener(marker1, 'click', goToLink);
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     //Map parametrs
     var mapOptions2 = {
         zoom: 14,
@@ -394,5 +376,3 @@ function initialize() {
     google.maps.event.addListener(marker123, 'click', goToLink);
 
 }
-
-
